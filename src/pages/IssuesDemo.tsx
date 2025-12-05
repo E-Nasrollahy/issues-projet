@@ -6,33 +6,33 @@ import { FilterProvider } from "@/Context/FilterContextProvider";
 import useFeach from "@/lib/useFeach";
 
 const IssuesDemo = () => {
-  const { data, isLoading, error } = useFeach();
+  const data  = useFeach();
 
-  if (isLoading) {
-    return (
-      <>
-        <HeaderDemo />
-        <div className="p-4">Loading issues...</div>
-      </>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <>
+  //       <HeaderDemo />
+  //       <div className="p-4">Loading issues...</div>
+  //     </>
+  //   );
+  // }
 
-  if (error) {
-    return (
-      <>
-        <HeaderDemo />
-        <div className="p-4 text-red-600">
-          Failed to load issues. See console for details.
-        </div>
-      </>
-    );
-  }
+  // if (error) {
+  //   return (
+  //     <>
+  //       <HeaderDemo />
+  //       <div className="p-4 text-red-600">
+  //         Failed to load issues. See console for details.
+  //       </div>
+  //     </>
+  //   );
+  // }
 
   return (
     <>
       <HeaderDemo />
 
-      {isLoading ? (
+      {/* {isLoading ? (
         <div className="flex justify-center items-center">is Loading ...</div>
       ) : (
         <FilterProvider List={data ?? []}>
@@ -42,7 +42,15 @@ const IssuesDemo = () => {
             <IssuseContainer />
           </>
         </FilterProvider>
-      )}
+      )} */}
+
+      <FilterProvider List={data ?? []}>
+          <>
+            <SearchFillterBar />
+            <StatusBar />
+            <IssuseContainer />
+          </>
+        </FilterProvider>
     </>
   );
 };

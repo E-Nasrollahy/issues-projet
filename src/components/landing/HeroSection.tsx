@@ -18,7 +18,7 @@ const HeroSection = () => {
           <ButtonStyle path="/sign-up">Get start for free</ButtonStyle>
         </div>
         <div>
-          <ButtonStyle path="/issuse-demo" style="wight">View demo</ButtonStyle>
+          <ButtonStyle path="/issues-demo" style="wight">View demo</ButtonStyle>
         </div>
       </div>
     </div>

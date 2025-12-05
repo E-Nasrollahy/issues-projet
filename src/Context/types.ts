@@ -13,6 +13,7 @@ export interface FilterContextType {
 }
 
 export interface issuse {
+  id : number;
   title: string;
   description: string;
   isOpen: boolean;
