@@ -5,11 +5,10 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/issues-projet/',
+  base: '/issues-project/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
 });
